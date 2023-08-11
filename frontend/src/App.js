@@ -1,10 +1,11 @@
+require("dotenv").config();
 import React from "react";
 // import "./App.css";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./checkoutForm";
 
-const stripePromise = loadStripe("pk_test_eraAwjhhgMBkGBjBrAgxPPFR00ij9uwvjM");
+const stripePromise = loadStripe(process.env.PublishableKey);
 const App = () => {
   return (
     <div>
